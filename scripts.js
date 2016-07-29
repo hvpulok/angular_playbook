@@ -1,7 +1,8 @@
-// console.log("script is connected");
-// people controller definition
-function PeopleController($scope) {
-    // define people model in scope here
+console.log("script is connected");
+var myApp = angular.module("myModule", []); // created a module
+
+// registering a controller to module
+myApp.controller("PeopleController", function($scope) {
     $scope.people = [{
         name: "John Doe",
         phone: "3452767342",
@@ -19,4 +20,5 @@ function PeopleController($scope) {
         phone: "3452767342",
         city: "New York"
     }];
-}
+
+});
