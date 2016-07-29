@@ -34,7 +34,7 @@
                     <h1>Address Book </h1>
                     <p>Total contacts: {{people.length}}</p>
                     <p>
-                        <a class="btn btn-success btn-lg">Add Contact</a>
+                        <a ng-click="ShowForm()" class="btn btn-success btn-lg">Add Contact</a>
                     </p>
                 </div>
             </div>
@@ -42,7 +42,7 @@
 
 
         <!--add contact form-->
-        <section class="panel panel-default">
+        <section ng-show="addContactFormVisible" class="panel panel-default">
             <div class="panel-heading">Add Contact</div>
             <div class="panel-body">
                 <form class="form-horizontal">

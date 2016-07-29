@@ -27,6 +27,13 @@ myApp.controller("PeopleController", function($scope) {
             phone: $scope.newPerson.phone,
             city: $scope.newPerson.city
         });
+         $scope.addContactFormVisible = false;
+    }
+
+    $scope.addContactFormVisible = false;
+
+    $scope.ShowForm = function() {
+        $scope.addContactFormVisible = !($scope.addContactFormVisible);
     }
 
 });
