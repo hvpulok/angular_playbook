@@ -21,4 +21,12 @@ myApp.controller("PeopleController", function($scope) {
         city: "New York"
     }];
 
+    $scope.Save = function() {
+        $scope.people.push({
+            name: $scope.newPerson.name,
+            phone: $scope.newPerson.phone,
+            city: $scope.newPerson.city
+        });
+    }
+
 });
