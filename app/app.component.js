@@ -26,11 +26,16 @@ System.register(['angular2/core', './courses.component', './authors.component'],
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.isFull = true;
                 }
+                AppComponent.prototype.onClick = function ($event) {
+                    console.log("h1 clicked");
+                    this.isFull = !this.isFull;
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<h1>Hello Angular</h1> <courses></courses> <authors></authors>',
+                        template: "\n        <div class=\"container\">\n            <h1>Hello Angular</h1> \n            <courses></courses> \n            <authors></authors>\n        \n            <h1 (click)=\"onClick($event)\">\n                <span class=\"glyphicon\" [class.glyphicon-star] =\"isFull\" [class.glyphicon-star-empty] =\"!isFull\" aria-hidden=\"true\" ></span>\n            </h1>\n        </div>\n        \n\n    ",
                         directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent]
                     }), 
                     __metadata('design:paramtypes', [])
